@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'Login', description: 'Ingrese nombre de usuario', defaultValue: '')
-        string(name: 'NombreApellido', description: 'Ingrese Nombre y Apellido', defaultValue: '')
-        choice(name: 'Areas', choices: ['Contabilidad', 'Finanzas', 'Tecnología'], description: 'Seleccione al area que pertenece')
+        string(name: 'Login', description: 'Por favor ingrese su nombre de usuario', defaultValue: '')
+        string(name: 'NombreApellido', description: 'Ingrese su Nombre y Apellido', defaultValue: '')
+        choice(name: 'Departamento', choices: ['Contabilidad', 'Finanzas', 'Tecnología'], description: 'Escoja Departamento al que pertenece')
     }
 
     stages {
@@ -14,11 +14,11 @@ pipeline {
             }
         }
 
-        stage('Generar clave temporal') {
+        stage('Generar password temporal') {
             steps {
                 script {
                     def passwordTemporal = sh(script: 'sudo openssl rand -base64 10', returnStdout: true).trim()
-                    echo "Su contraseña: ${passwordTemporal}"
+                    echo "Su contraseña es: ${passwordTemporal}"
                     env.PASSWORD_TEMPORAL = passwordTemporal
                 }
             }
