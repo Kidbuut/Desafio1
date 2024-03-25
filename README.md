@@ -22,5 +22,7 @@ Pasos para ejecutar el script
   ![image](https://github.com/Kidbuut/Desafio1/assets/120615998/dd762bb8-ddb5-4044-898f-f2a395665063)
   y si es incorrecto asi.
   ![image](https://github.com/Kidbuut/Desafio1/assets/120615998/b33f54cc-96f4-4f5f-9e4a-7ac76b7251f7)
+  ![image](https://github.com/Kidbuut/Desafio1/assets/120615998/96a30695-f782-4783-959f-cec62cde134d)
+
 
   una vez finalizado estos pasos ya nuestro Pipeline esta listo para ser desplegado.
