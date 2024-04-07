@@ -9,7 +9,7 @@ pipeline {
 
     stages {
         stage('Crear usuario') {
-            steps {
+            steps { testing
                 sh "sudo useradd -m -s /bin/bash -c '${NombreApellido}' ${Login}"
             }
         }
