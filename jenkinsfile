@@ -25,7 +25,7 @@ pipeline {
         }
 
         stage('Asignar contraseña temporal') {
-            steps {
+            steps { testing
                 sh "echo ${Login}: ${PASSWORD_TEMPORAL} | sudo chpasswd"
             }
         }
