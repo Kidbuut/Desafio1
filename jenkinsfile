@@ -15,7 +15,7 @@ pipeline {
         }
 
         stage('Generar clave temporal') {
-            steps { testing
+            steps {
                 script {
                     def passwordTemporal = sh(script: 'sudo openssl rand -base64 10', returnStdout: true).trim()
                     echo "Su contraseña es: ${passwordTemporal}"
